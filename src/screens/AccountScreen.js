@@ -3,6 +3,7 @@ import {View, StyleSheet, Text} from 'react-native';
 import {Button} from 'react-native-elements';
 import {SafeAreaView} from 'react-navigation';
 import {Context as AuthContext} from '../context/AuthContext';
+import {MaterialCommunityIcons} from '@expo/vector-icons';
 
 const AccountScreen = () => {
     const {signout} = useContext(AuthContext);
@@ -14,6 +15,12 @@ const AccountScreen = () => {
     </SafeAreaView>
     );
 };
+
+AccountScreen.navigationOptions ={
+    title: 'Account',
+    tabBarIcon: <MaterialCommunityIcons 
+    name="account-check" size = {24} />
+}
 
 const styles = StyleSheet.create({
     
